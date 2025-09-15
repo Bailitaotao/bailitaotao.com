@@ -1,5 +1,6 @@
 site_name: Timothy's Website
 site_url: https://bailitaotao.com
+
 theme:
   name: material
   logo: assets/images/logo-tao-no-frame.svg
@@ -12,6 +13,30 @@ theme:
     - navigation.top
     - navigation.footer
 
+markdown_extensions:
+
+  # Admonitions
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+  # Mermaid support
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  # Footnotes
+  - footnotes
+
+  # Grids
+  - attr_list
+  - md_in_html
+
+# Copyright
+copyright: Copyright &copy; 2025 - 2026 Timothy Tao
+
 extra:
   social:
     - icon: fontawesome/brands/github
@@ -22,11 +47,9 @@ extra:
       link: https://space.bilibili.com/325680073
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/bailitaotao/
-  generator: false
 
+  # Display "Made with Material for MkDocs"
+  generator: false
 
 extra_css:
   - stylesheets/extra.css
-
-copyright: Copyright &copy; 2024 - 2025 Timothy Tao
-
