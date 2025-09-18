@@ -1,4 +1,4 @@
-site_name: Timothy's Website
+site_name: Timothy's portfolio
 site_url: https://bailitaotao.com
 
 theme:
@@ -11,7 +11,10 @@ theme:
     - navigation.tabs
     - navigation.path
     - navigation.top
+    - navigation.path
     - navigation.footer
+
+
 
 markdown_extensions:
 
