@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bailitaotao's Website</title>
+  <title>Timothy's Website</title>
   <link rel="icon" href="logo-tao-no-frame.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,16 +14,18 @@
   <div class="overlay"></div>
   <header>
     <nav>
+      <div class="logo">
+        <a href="/"><img src="images/logo-tao-no-frame.svg" alt="Logo" style="height: 24px; display: block;"></a>
+      </div>
       <ul>
-        <li><a href="/"><img src="images/logo-tao-no-frame-white.svg" alt="Logo"
-              style="height: 20px; display: block;"></a></li>
-        <li><a href="#">Home</a></li>
+        <li><a href="#">HOME</a></li>
         <li class="has-dropdown">
-          <a href="#">Games</a>
+          <a href="#">GAMES</a>
           <div class="dropdown-menu">
             <div class="dropdown-content">
               <ul class="dropdown-links">
-                <li><span class="dropdown-title">Explore Games</span></li>
+                <li><span class="dropdown-title">Explore Portfolios</span></li>
+                <li><a href="#">Veiw All Games</a></li>
                 <li><a href="#">Verdant Veil</a></li>
                 <li><a href="#">Micro Master</a></li>
                 <li><a href="#">Myth Valley</a></li>
@@ -32,7 +34,7 @@
           </div>
         </li>
         <li class="has-dropdown">
-          <a href="#">Photos</a>
+          <a href="#">PHOTOS</a>
           <div class="dropdown-menu">
             <div class="dropdown-content">
               <ul class="dropdown-links">
@@ -43,13 +45,50 @@
             </div>
           </div>
         </li>
-        <li><a href="#">About me</a></li>
+        <li><a href="#">ABOUT</a></li>
       </ul>
+      <div class="email-icon">
+        <a href="mailto:thy20030626@gmail.com" title="Contact me">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <img src="images/test.jpg" alt="Test Image" style="width: 100%;">
+    <div class="cover-container">
+      <video src="images/home/cover.webm" autoplay loop muted playsinline style="width: 100%; display: block;"></video>
+      <img src="images/home/zi-feng.webp" class="cover-overlay" alt="Zi Feng">
+      <div class="cover-text">
+        <h1>TIMOTHY TAO</h1>
+        <p>Game Developer | Photographer | Electronic Engineer</p>
+      </div>
+    </div>
+    <div class="about-section">
+      <div class="portrait">
+        <img src="images/home/myself.webp" alt="Myself">
+      </div>
+      <div class="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+          <span>2021.9-2025.7</span>
+          <span> <b>Nanjing Tech University</b> | Electronic Engineering</span>
+        </div>
+        <div class="experience-item">
+          <span>2025.7-2025.9</span>
+          <span> <b>NetEase</b> | User Experience Designer</span>
+        </div>
+        <div class="experience-item">
+          <span>2026.1-2026.5</span>
+          <span><b>Travel</b> | Solo road trip around China</span>
+        </div>
+      </div>
+    </div>
     <div class="content-wrapper">
       <p>This is the main content area.
         This is the main content area.This is the main content area.This is the main content area.This is the
@@ -94,7 +133,7 @@
 
   <!--Footer-->
   <footer>
-    <p>&copy; 2025 Bailitaotao</p>
+    <p>&copy; 2025 Timothy Tao</p>
   </footer>
 
   <script src="js/main.js"></script>

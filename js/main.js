@@ -26,9 +26,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   header.addEventListener("mouseleave", () => {
+    closeAllDropdowns();
+  });
+
+  // Close dropdowns when scrolling
+  window.addEventListener("wheel", () => {
+    if (activeDropdown) {
+      closeAllDropdowns();
+    }
+  }, { passive: true });
+
+  // Helper function to close all dropdowns
+  function closeAllDropdowns() {
     dropdowns.forEach(d => d.classList.remove("active"));
     overlay.classList.remove("active");
     header.classList.remove("solid");
     activeDropdown = null;
-  });
+  }
 });
