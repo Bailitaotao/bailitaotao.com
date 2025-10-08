@@ -9,6 +9,7 @@
   --color-overlay: rgba(0, 0, 0, 0.4);
   
   --header-height: 50px;
+  --announcement-height: 36px;
   --transition-fast: 0.3s ease;
   --transition-normal: 0.5s ease;
   --max-width: 980px;
@@ -114,6 +115,81 @@ header nav ul li a:hover {
   color: var(--color-accent);
 }
 
+/* Announcement Banner */
+.announcement-banner {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: var(--announcement-height);
+  background: var(--color-accent)/*#0071e3*/;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.announcement-banner.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.announcement-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 0 22px;
+  position: relative;
+}
+
+.announcement-text {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-align: center;
+  flex: 1;
+}
+
+.announcement-close {
+  position: absolute;
+  right: 22px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color var(--transition-fast), opacity var(--transition-fast);
+  opacity: 0.8;
+}
+
+.announcement-close:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  opacity: 1;
+}
+
+.announcement-close:active {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Adjust content wrapper when announcement is visible */
+body.announcement-visible .content-wrapper {
+  padding-top: calc(var(--header-height) + var(--announcement-height) + var(--spacing-standard));
+}
+
+.content-wrapper {
+  padding-top: calc(var(--header-height) + var(--spacing-standard));
+  transition: padding-top var(--transition-fast);
+}
+
 /* Main Content */
 main {
   min-height: 80vh;
@@ -214,10 +290,6 @@ main {
   margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.6;
-}
-
-.content-wrapper {
-  padding: var(--spacing-standard);
 }
 
 /* Footer */
