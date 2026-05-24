@@ -40,13 +40,6 @@ h2 {
   line-height: 1.2;
 }
 
-/* Specific style for Article/Content Body h2 */
-.article-content h2 {
-  margin: 6rem 0 2rem;
-  width: fit-content;
-  display: block;
-}
-
 h3 {
   font-size: 1.8rem;
   font-weight: bold;
